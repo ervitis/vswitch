@@ -39,6 +39,13 @@ class TestSetupVSwitch(unittest.TestCase):
     def test_setup_params_is_dict(self):
         self.assertIsInstance(setup_params, dict)
 
+    def test_setup_params_has_name(self):
+        self.assertIn('name', setup_params)
+
+    def test_setup_params_name_has_value(self):
+        self.assertIsNotNone(setup_params['name'])
+        self.assertIn('name', setup_params)
+
 
 if __name__ == '__main__':
     unittest.main()
