@@ -2,14 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup
-from vswitch import (
-    __version__ as version,
-    __package_name__ as package_name
-)
+from vswitch import install_params
 
-setup_params = dict(
-    version=version,
-    name=package_name
-)
-
-setup(setup_params)
+setup(**install_params)
