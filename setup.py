@@ -11,3 +11,5 @@ setup_params = dict(
     version=version,
     name=package_name
 )
+
+setup(setup_params)
