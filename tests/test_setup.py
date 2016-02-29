@@ -20,6 +20,14 @@ class TestSetupVSwitch(unittest.TestCase):
         with open(self.path_setup_script) as setup_file:
             self.assertGreater(len(setup_file.readlines()), 0)
 
+    def test_setup_file_imports_setuptools(self):
+        with open(self.path_setup_script) as setup_file:
+            self.assertTrue(any('setuptools' in _ for _ in setup_file.readlines()))
+
+    def test_setup_file_imports_setup_function(self):
+        with open(self.path_setup_script) as setup_file:
+            self.assertTrue(any('setup' in _ for _ in setup_file.readlines()))
+
 
 if __name__ == '__main__':
     unittest.main()

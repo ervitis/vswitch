@@ -287,3 +287,6 @@ crashlytics-build.properties
 
 # Testing files and folders
 man
+
+# Python compile files
+*.pyc
